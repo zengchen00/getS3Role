@@ -17,11 +17,11 @@ public class S3Operation {
                 .build();
         ListObjectsV2Response listObjectsV2Response = s3Client.listObjectsV2(listObjectsRequest);
 
-        System.out.println("keyCount:" + listObjectsV2Response.keyCount());
+        System.out.println("keyCount: " + listObjectsV2Response.keyCount());
         List<S3Object> contents = listObjectsV2Response.contents();
         if (contents != null) {
             for (S3Object content : contents) {
-                System.out.println("object key:" + content.key());
+                System.out.println("object key: " + content.key());
             }
         }
 
