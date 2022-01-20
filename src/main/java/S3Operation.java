@@ -21,7 +21,7 @@ public class S3Operation {
         List<S3Object> contents = listObjectsV2Response.contents();
         if (contents != null) {
             for (S3Object content : contents) {
-                System.out.println("object key" + content.key());
+                System.out.println("object key:" + content.key());
             }
         }
 
